@@ -486,6 +486,8 @@ VALUES
 
 
 ### 9 TABELAS E PRINCIPAIS CONSULTAS<br>
+
+![Alt text](https://raw.githubusercontent.com/jramso/Trab_BD1_2022/master/Files/Colab/GHHL_Contrat.ipynb)
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
 
