@@ -211,13 +211,13 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 /* GHHL_Logico: */
 
 CREATE TABLE USUARIO (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome VARCHAR(50),
     data_nasc Integer
 );
 
 CREATE TABLE VAGA (
-    ID Integer PRIMARY KEY,
+    ID SERIAL PRIMARY KEY,
     carga_horaria Integer,
     FK_GESTOR_Id integer,
     FK_CARGO Integer,
@@ -231,31 +231,30 @@ CREATE TABLE CANDIDATO (
     FK_USUARIO_id Integer,
     PRIMARY KEY (id_candidato)
 );
-
 CREATE TABLE GESTOR (
-    Id integer PRIMARY KEY,
+    Id SERIAL PRIMARY KEY,
     email VARCHAR(50),
     FK_USUARIO_id Integer,
     id_tipo Integer
 );
 
 CREATE TABLE CARGO (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nomeCargo VARCHAR(50)
 );
 
 CREATE TABLE BAIRRO (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome_bairro VARCHAR(50)
 );
 
 CREATE TABLE CIDADE (
-    id Integer PRIMARY KEY,
+    id Serial PRIMARY KEY,
     nome_cidade VARCHAR(50)
 );
 
 CREATE TABLE ENDERECO (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     cep varchar(10),
     numero Integer,
     FK_CIDADE_id Integer,
@@ -266,12 +265,12 @@ CREATE TABLE ENDERECO (
 );
 
 CREATE TABLE AREA (
-    id Integer PRIMARY KEY,
+    id Serial PRIMARY KEY,
     nome_area VARCHAR(50)
 );
 
 CREATE TABLE LOGRADOURO (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome VARCHAR(50),
     complemento VARCHAR(50),
     FK_TIPO_LOGRADOURO Integer
@@ -283,18 +282,18 @@ CREATE TABLE Possui (
 );
 
 CREATE TABLE TIPO_LOGRADOURO (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome_tipo VARCHAR(50),
     abreviatura VARCHAR(50)
 );
 
 CREATE TABLE ESTADO (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome_estado VARCHAR(50)
 );
 
 CREATE TABLE FILIAL (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     telefone_fixo VARCHAR(50),
     nome_fantasia VARCHAR(50),
     FK_ENDERECO Integer,
@@ -302,22 +301,20 @@ CREATE TABLE FILIAL (
 );
 
 CREATE TABLE PAIS (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome_estado VARCHAR(50)
 );
 
 CREATE TABLE CONCORRE (
-    id Integer PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     FK_CANDIDATO Integer,
     FK_VAGA Integer
 );
 
 CREATE TABLE TIPO_GESTOR (
-    id_tipo Integer PRIMARY KEY,
+    id_tipo SERIAL PRIMARY KEY,
     nome_tipo VARCHAR(50)
 );
-
-
 /*FOREIGN KEYS de CARGO,AREA,GESTOR para VAGA*/
 ALTER TABLE VAGA ADD CONSTRAINT FK_VAGA_2
     FOREIGN KEY (FK_CARGO)
