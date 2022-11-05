@@ -199,3 +199,17 @@ ALTER TABLE CONCORRE ADD CONSTRAINT FK_CONCORRE_3
 --if necessary
 -- ALTER TABLE CANDIDATO DROP COLUMN FK_USUARIO_ID;
 --ALTER TABLE candidato ADD COLUMN FK_USUARIO_id integer;
+alter table estado add COLUMN FK_id_pais INTEGER;
+alter table cidade add COLUMN FK_id_estado INTEGER;
+alter table bairro add COLUMN FK_id_cidade INTEGER;
+
+ALTER TABLE estado ADD CONSTRAINT FK_pais_1
+    FOREIGN KEY (FK_id_pais)
+    REFERENCES pais (id);
+
+ALTER TABLE cidade ADD CONSTRAINT FK_estado_1
+    FOREIGN KEY (FK_id_estado)
+    REFERENCES estado (id);
+ALTER TABLE bairro ADD CONSTRAINT FK_cidade_1
+    FOREIGN KEY (FK_id_cidade)
+    REFERENCES cidade (id);

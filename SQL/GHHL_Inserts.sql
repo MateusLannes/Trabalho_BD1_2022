@@ -2,6 +2,7 @@
 
 --alter table vaga drop CONSTRAINT FK_VAGA_1;
 
+
 insert into area (nome_area)VALUES
 ('programacao'),
 ('segurança'),
@@ -34,28 +35,86 @@ VALUES
   ('Lysandra Mclaughlin','1994-08-27'),
   ('Mariam Dennis','2006-11-03');
 
-INSERT INTO cidade (nome_cidade)
-VALUES
-  ('Ribeirão Preto'),
-  ('Petrolina'),
-  ('Sousa'),
-  ('Ananindeua'),
-  ('Ilhéus'),
-  ('Castanhal'),
-  ('Caxias do Sul'),
-  ('Contagem'),
-  ('Castanhal'),
-  ('Campina Grande');
 
+
+  
 INSERT INTO pais (nome_pais)
 VALUES
-  ('Portugal'),
-  ('China'),
-  ('Germany'),
-  ('Indonesia'),
-  ('United Kingdom'),
-  ('France'),
-  ('México'),
-  ('Spain'),
+  ('Portugal'), --
+  ('China'), --
+  ('Germany'), --
+  ('Indonesia'), --
+  ('United Kingdom'),--
+  ('France'), --
+  ('México'), --
+  ('Spain'), --
   ('Colombia'),
-  ('Brasil');
+  ('Brasil'); --
+
+INSERT INTO estado (nome_estado)
+VALUES 
+  ('Baviera'), --Alemanha ++
+  ('Suffolk'), -- Reino Unido - Inglaterra ++
+  ('Córsega'), -- França ++
+  ('Java'), -- Indonésia ++
+  ('Boyacá'), -- Colombia ++
+  ('Tabasco'), -- Mexico ++
+  ('Maranhão'), -- Brasil ++
+  ('Baja California'), -- México ++
+  ('Puebla'), -- MExico ++
+  ('Lisboa'), -- portugal ++
+  ('Barcelona'), --Espanha ++
+  ('Colorado'), -- EUA ++
+  ('Minnesota'), -- EUA ++
+  ('Dōngběi'), -- China ++
+  ('São Paulo'), --Brasil ++
+  ('Utah'), -- EUA ++
+  ('Michoacán'), -- Mexico 
+  ('California'); -- EUA ++
+
+UPDATE estado set nome_estado ='Catalunha' WHERE id=11;
+
+INSERT INTO cidade (nome_cidade, fk_id_estado)
+VALUES
+  ('Tunja',17), -- COLOMBIA capital de [BOYACA] ++++
+  ('Denver',5), -- EUA Capital do [Colorado] ++++
+  ('Villahermosa',1),--MEXICO Capital de [TABASCO] ++++
+  ('Munique',12), -- ALEMANHA Capital de [Baviera] ++++
+  ('Ipswich',13), -- UK INGLATERRA centro Adiministrativo de [Suffolk]++
+  ('São paulo',8), -- Brasil capital de [SAO PAULO] ++++
+  ('Jacarta',15), --INDONESIA capital de [JAVA]++++
+  ('Ajaccio',14), -- FRANÇA capital de [CORSEGA] ++++(Cidade de napoleao)
+  ('Lisboa',16), -- PORTUGAL capital de [LISBOA] ++++
+  ('São Luís',2), -- BRASIL capital do [MARANHÃO] ++
+  ('Puebla',4), -- MÉXICO capital de [PUEBLA]++
+  ('Mexicali',3), -- MÉXICO capital de [BAJA CALIFORNIA] ++
+  ('Saint Paul',6), -- EUA capital de [MINESSOTA] ++++
+  ('Shenyang',7), -- CHINA capital de [DONGBEI] ++
+  ('Salt Lake City',9), --EUA capital de [UTAH] ++
+  ('Sacramento',18), --EUA capital da [CALIFORNIA] ++
+  ('Morélia',10),--MÉXICO capital de [MICHOACAN]
+  ('Barcelona',11), --ESPANHA capital da [CATALUNHA]
+  ('Los Angeles',18); -- EUA cidade da [CALIFORNIA] ++++
+
+INSERT INTO bairro (nome_bairro, fk_id_cidade) VALUES
+('Vila Mariana',16), --Sao paulo [Sao Paulo]
+('Ibirapuera',16), -- Sao paulo [São paulo]
+('Santo António',19), -- Portugal [Lisboa]
+('Alfama',19), -- Portugal  [Lisboa]
+('La choca',13),  -- Mexico [Villahermosa]
+('Summit Hill',23), -- EUA Minnesota [Saint Paul]
+('Chinatown',29), -- EUA California [Los angeles]
+('Maldonado',11), -- COLOMBIA [Tunja]
+('Lower Downtown',12), -- EUA [Denver]
+('Sendling',14), -- Alemanha [Munique]
+('Ipswich',15), -- UK Inglaterra [Suffolk ipswich]
+('Glodok Chinatown',17), -- Indonesia JAVA [JACARTA]
+('Bairro Genoves',18), -- França  Corsega [Ajaccio] 
+('Renascença',20), --Brasil Maranhao[São Luís]
+('Zócalo',21), -- México Puebla [PUEBLA]
+('Éguia',22), --México Baja California [Mexicali]
+('Tie xi',24), -- China Dongbei [Shenyang]
+('Salt Lake Valley',25), -- EUA Salt Lake City [UTAH]
+('River Park',26), -- EUA California [Sacramento]
+('El Gòtic',28), -- Espanha barcelona [Catalunha]
+('Centro Histórico',27) -- México Michoacan [morelia]
