@@ -6,10 +6,10 @@
 # Sumário
 
 
+<details>
+    <summary> <strong style="font-size:20px;">Entrega 1</strong> </summary>
 
-## Entrega 1
 ***
-
 - :white_check_mark: [1. Componentes preenchidos](#1-componentes)
 - :white_check_mark: [2. Introdução e motivação](#2introdução-e-motivação)
 - :white_check_mark: [3. Mini-mundo](#3mini-mundo)
@@ -26,7 +26,11 @@
 - :white_large_square: [9. Tabelas e Principais Consultas](#9-tabelas-e-principais-consultas)
     - :white_large_square: [9.1 Consulta das tabelas com todos os dados inseridos](#91-consultas-das-tabelas-com-todos-os-dados-inseridos-todas)
 ***
-## Entrega 2
+
+</details>
+<details>
+<summary><strong style="font-size:20px;"> Entrega 2 </strong></summary>
+
 ***
 - - :white_large_square: [9.2 Consulta das tabelas com filtros `WHERE`](#92-consultas-das-tabelas-com-filtros-where-mínimo-4)
   - :white_large_square: [9.3 Consultas L.A e tabelas ou campos renomeados](#93-consultas-que-usam-operadores-lógicos-aritméticos-e-tabelas-ou-campos-renomeados-mínimo-11)
@@ -37,6 +41,9 @@
   - :white_large_square: [9.8 Consultas com `LEFT`, `RIGHT` e `FULL JOIN`](#98-consultas-com-left-right-e-full-join-mínimo-4)
   - :white_large_square: [9.9 Consultas com `SELF JOIN` e `VIEW`](#99-consultas-com-self-join-e-view-mínimo-6)
   - :white_large_square: [9.10 Subconsultas](#910-subconsultas-mínimo-4)
+
+</details>
+
 ***
 ## Entrega 3
 ***
@@ -539,16 +546,7 @@ INSERT INTO bairro (nome_bairro, fk_id_cidade) VALUES
 
 
 ### 9 TABELAS E PRINCIPAIS CONSULTAS<br>
-<html>
-<head>
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-<a href="https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/Colab/GHHL_Contrat.ipynb">
-<button type="button" class="btn btn-sucess"> View on Colab!</button>
-</a>
-</body>
-</html>
+
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
 
