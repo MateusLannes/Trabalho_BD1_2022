@@ -201,353 +201,353 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 
 ### 7 MODELO FÍSICO<br>
 <!-- a) inclusão das instruções de criacão das estruturas em SQL/DDL (criação de tabelas, alterações, etc..)  -->
-- LINK:  [GGHL_fisico](SQL/GHHL_Fisico.sql)
+- [Link Colab: GGHL_fisico](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/Colab/GHHL_Contrat.ipynb)
 
 <!-- ![SQL](https://github.com/jramso/Trab_BD1_2022/blob/master/SQL/GHHL_Fisico.sql?raw=true) -->
 
+- <details> <summary>Codigo modelo fisico</summary>
 
-```sql
-/* GHHL_Logico: */
+    ```sql
+    /* GHHL_Logico: */
 
-CREATE TABLE USUARIO (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(50),
-    data_nasc Integer
-);
+    CREATE TABLE USUARIO (
+        id SERIAL PRIMARY KEY,
+        nome VARCHAR(50),
+        data_nasc Integer
+    );
 
-CREATE TABLE VAGA (
-    ID SERIAL PRIMARY KEY,
-    carga_horaria Integer,
-    FK_GESTOR_Id integer,
-    FK_CARGO Integer,
-    FK_AREA Integer
-);
+    CREATE TABLE VAGA (
+        ID SERIAL PRIMARY KEY,
+        carga_horaria Integer,
+        FK_GESTOR_Id integer,
+        FK_CARGO Integer,
+        FK_AREA Integer
+    );
 
-CREATE TABLE CANDIDATO (
-    descricao VARCHAR(50),
-    qualificacao VARCHAR(50),
-    id_candidato Integer,
-    FK_USUARIO_id Integer,
-    PRIMARY KEY (id_candidato)
-);
-CREATE TABLE GESTOR (
-    Id SERIAL PRIMARY KEY,
-    email VARCHAR(50),
-    FK_USUARIO_id Integer,
-    id_tipo Integer
-);
+    CREATE TABLE CANDIDATO (
+        descricao VARCHAR(50),
+        qualificacao VARCHAR(50),
+        id_candidato Integer,
+        FK_USUARIO_id Integer,
+        PRIMARY KEY (id_candidato)
+    );
+    CREATE TABLE GESTOR (
+        Id SERIAL PRIMARY KEY,
+        email VARCHAR(50),
+        FK_USUARIO_id Integer,
+        id_tipo Integer
+    );
 
-CREATE TABLE CARGO (
-    id SERIAL PRIMARY KEY,
-    nomeCargo VARCHAR(50)
-);
+    CREATE TABLE CARGO (
+        id SERIAL PRIMARY KEY,
+        nomeCargo VARCHAR(50)
+    );
 
-CREATE TABLE BAIRRO (
-    id SERIAL PRIMARY KEY,
-    nome_bairro VARCHAR(50)
-);
+    CREATE TABLE BAIRRO (
+        id SERIAL PRIMARY KEY,
+        nome_bairro VARCHAR(50)
+    );
 
-CREATE TABLE CIDADE (
-    id Serial PRIMARY KEY,
-    nome_cidade VARCHAR(50)
-);
+    CREATE TABLE CIDADE (
+        id Serial PRIMARY KEY,
+        nome_cidade VARCHAR(50)
+    );
 
-CREATE TABLE ENDERECO (
-    id SERIAL PRIMARY KEY,
-    cep varchar(10),
-    numero Integer,
-    FK_CIDADE_id Integer,
-    FK_BAIRRO_id Integer,
-    FK_ESTADO_id Integer,
-    FK_PAIS_id Integer,
-    FK_LOGRADOURO_id Integer
-);
+    CREATE TABLE ENDERECO (
+        id SERIAL PRIMARY KEY,
+        cep varchar(10),
+        numero Integer,
+        FK_CIDADE_id Integer,
+        FK_BAIRRO_id Integer,
+        FK_ESTADO_id Integer,
+        FK_PAIS_id Integer,
+        FK_LOGRADOURO_id Integer
+    );
 
-CREATE TABLE AREA (
-    id Serial PRIMARY KEY,
-    nome_area VARCHAR(50)
-);
+    CREATE TABLE AREA (
+        id Serial PRIMARY KEY,
+        nome_area VARCHAR(50)
+    );
 
-CREATE TABLE LOGRADOURO (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(50),
-    complemento VARCHAR(50),
-    FK_TIPO_LOGRADOURO Integer
-);
+    CREATE TABLE LOGRADOURO (
+        id SERIAL PRIMARY KEY,
+        nome VARCHAR(50),
+        complemento VARCHAR(50),
+        FK_TIPO_LOGRADOURO Integer
+    );
 
-CREATE TABLE Possui (
-    fk_USUARIO_id Integer,
-    fk_ENDERECO_FILIAL_PAIS_id integer
-);
+    CREATE TABLE Possui (
+        fk_USUARIO_id Integer,
+        fk_ENDERECO_FILIAL_PAIS_id integer
+    );
 
-CREATE TABLE TIPO_LOGRADOURO (
-    id SERIAL PRIMARY KEY,
-    nome_tipo VARCHAR(50),
-    abreviatura VARCHAR(50)
-);
+    CREATE TABLE TIPO_LOGRADOURO (
+        id SERIAL PRIMARY KEY,
+        nome_tipo VARCHAR(50),
+        abreviatura VARCHAR(50)
+    );
 
-CREATE TABLE ESTADO (
-    id SERIAL PRIMARY KEY,
-    nome_estado VARCHAR(50)
-);
+    CREATE TABLE ESTADO (
+        id SERIAL PRIMARY KEY,
+        nome_estado VARCHAR(50)
+    );
 
-CREATE TABLE FILIAL (
-    id SERIAL PRIMARY KEY,
-    telefone_fixo VARCHAR(50),
-    nome_fantasia VARCHAR(50),
-    FK_ENDERECO Integer,
-    FK_GESTOR Integer
-);
+    CREATE TABLE FILIAL (
+        id SERIAL PRIMARY KEY,
+        telefone_fixo VARCHAR(50),
+        nome_fantasia VARCHAR(50),
+        FK_ENDERECO Integer,
+        FK_GESTOR Integer
+    );
 
-CREATE TABLE PAIS (
-    id SERIAL PRIMARY KEY,
-    nome_estado VARCHAR(50)
-);
+    CREATE TABLE PAIS (
+        id SERIAL PRIMARY KEY,
+        nome_estado VARCHAR(50)
+    );
 
-CREATE TABLE CONCORRE (
-    id SERIAL PRIMARY KEY,
-    FK_CANDIDATO Integer,
-    FK_VAGA Integer
-);
+    CREATE TABLE CONCORRE (
+        id SERIAL PRIMARY KEY,
+        FK_CANDIDATO Integer,
+        FK_VAGA Integer
+    );
 
-CREATE TABLE TIPO_GESTOR (
-    id_tipo SERIAL PRIMARY KEY,
-    nome_tipo VARCHAR(50)
-);
-/*FOREIGN KEYS de CARGO,AREA,GESTOR para VAGA*/
-ALTER TABLE VAGA ADD CONSTRAINT FK_VAGA_2
-    FOREIGN KEY (FK_CARGO)
-    REFERENCES CARGO (id);
+    CREATE TABLE TIPO_GESTOR (
+        id_tipo SERIAL PRIMARY KEY,
+        nome_tipo VARCHAR(50)
+    );
+    /*FOREIGN KEYS de CARGO,AREA,GESTOR para VAGA*/
+    ALTER TABLE VAGA ADD CONSTRAINT FK_VAGA_2
+        FOREIGN KEY (FK_CARGO)
+        REFERENCES CARGO (id);
 
-ALTER TABLE VAGA ADD CONSTRAINT FK_VAGA_1
-    FOREIGN KEY (FK_AREA)
-    REFERENCES AREA (id);
-ALTER TABLE VAGA ADD CONSTRAINT FK_VAGA_3
-    FOREIGN KEY (FK_GESTOR_ID)
-    REFERENCES GESTOR (ID);
+    ALTER TABLE VAGA ADD CONSTRAINT FK_VAGA_1
+        FOREIGN KEY (FK_AREA)
+        REFERENCES AREA (id);
+    ALTER TABLE VAGA ADD CONSTRAINT FK_VAGA_3
+        FOREIGN KEY (FK_GESTOR_ID)
+        REFERENCES GESTOR (ID);
 
-/*FK de Usuario para candidato*/
-ALTER TABLE CANDIDATO ADD CONSTRAINT FK_CANDIDATO_1
-    FOREIGN KEY (FK_USUARIO_id)
-    REFERENCES USUARIO (id)
-    ON DELETE CASCADE;
+    /*FK de Usuario para candidato*/
+    ALTER TABLE CANDIDATO ADD CONSTRAINT FK_CANDIDATO_1
+        FOREIGN KEY (FK_USUARIO_id)
+        REFERENCES USUARIO (id)
+        ON DELETE CASCADE;
 
-/*FK de USUARIO,TIPO_GESTOR para GESTOR*/
-ALTER TABLE GESTOR ADD CONSTRAINT FK_GESTOR_1
-    FOREIGN KEY (FK_USUARIO_id)
-    REFERENCES USUARIO (id);
-ALTER TABLE GESTOR ADD CONSTRAINT FK_GESTOR_2
-    FOREIGN KEY (id_tipo)
-    REFERENCES TIPO_GESTOR (id_tipo);
- 
-/*FK de CIDADE,BAIRRO,ESTADO,PAIS,LOGRADOURO para ENDERECO*/
-ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_1
-    FOREIGN KEY (FK_CIDADE_id)
-    REFERENCES CIDADE (id)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_3
-    FOREIGN KEY (FK_BAIRRO_id)
-    REFERENCES BAIRRO (id)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_4
-    FOREIGN KEY (FK_PAIS_id)
-    REFERENCES PAIS (id);
- 
-ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_5
-    FOREIGN KEY (FK_ESTADO_id)
-    REFERENCES ESTADO (id);
- 
-ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_6
-    FOREIGN KEY (FK_LOGRADOURO_id)
-    REFERENCES LOGRADOURO (id);
- 
-/*FK de TIPO_LOGRADOURO para LOGRADOURO*/
-ALTER TABLE LOGRADOURO ADD CONSTRAINT FK_LOGRADOURO_2
-    FOREIGN KEY (FK_TIPO_LOGRADOURO)
-    REFERENCES TIPO_LOGRADOURO (id);
- 
-/*altera o nome da tabela POSSUI para USUARIO_ENDERECO*/
-ALTER TABLE POSSUI RENAME TO usuario_endereco;
--- FK de usuario para usuario_endereco
-ALTER TABLE usuario_endereco ADD CONSTRAINT FK_Possui_1
-    FOREIGN KEY (fk_USUARIO_id)
-    REFERENCES USUARIO (id)
-    ON DELETE RESTRICT;
+    /*FK de USUARIO,TIPO_GESTOR para GESTOR*/
+    ALTER TABLE GESTOR ADD CONSTRAINT FK_GESTOR_1
+        FOREIGN KEY (FK_USUARIO_id)
+        REFERENCES USUARIO (id);
+    ALTER TABLE GESTOR ADD CONSTRAINT FK_GESTOR_2
+        FOREIGN KEY (id_tipo)
+        REFERENCES TIPO_GESTOR (id_tipo);
+    
+    /*FK de CIDADE,BAIRRO,ESTADO,PAIS,LOGRADOURO para ENDERECO*/
+    ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_1
+        FOREIGN KEY (FK_CIDADE_id)
+        REFERENCES CIDADE (id)
+        ON DELETE RESTRICT;
+    
+    ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_3
+        FOREIGN KEY (FK_BAIRRO_id)
+        REFERENCES BAIRRO (id)
+        ON DELETE RESTRICT;
+    
+    ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_4
+        FOREIGN KEY (FK_PAIS_id)
+        REFERENCES PAIS (id);
+    
+    ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_5
+        FOREIGN KEY (FK_ESTADO_id)
+        REFERENCES ESTADO (id);
+    
+    ALTER TABLE ENDERECO ADD CONSTRAINT FK_ENDERECO_6
+        FOREIGN KEY (FK_LOGRADOURO_id)
+        REFERENCES LOGRADOURO (id);
+    
+    /*FK de TIPO_LOGRADOURO para LOGRADOURO*/
+    ALTER TABLE LOGRADOURO ADD CONSTRAINT FK_LOGRADOURO_2
+        FOREIGN KEY (FK_TIPO_LOGRADOURO)
+        REFERENCES TIPO_LOGRADOURO (id);
+    
+    /*altera o nome da tabela POSSUI para USUARIO_ENDERECO*/
+    ALTER TABLE POSSUI RENAME TO usuario_endereco;
+    -- FK de usuario para usuario_endereco
+    ALTER TABLE usuario_endereco ADD CONSTRAINT FK_Possui_1
+        FOREIGN KEY (fk_USUARIO_id)
+        REFERENCES USUARIO (id)
+        ON DELETE RESTRICT;
 
--- renomeia a coluna de usuario_endereco
-ALTER TABLE usuario_endereco 
-    RENAME COLUMN fk_endereco_filial_pais_id TO fk_endereco_id;
--- FK de endereco para usuario_endereco
-ALTER TABLE usuario_endereco ADD CONSTRAINT FK_Possui_2
-    FOREIGN KEY (fk_ENDERECO_id)
-    REFERENCES endereco (ID);
+    -- renomeia a coluna de usuario_endereco
+    ALTER TABLE usuario_endereco 
+        RENAME COLUMN fk_endereco_filial_pais_id TO fk_endereco_id;
+    -- FK de endereco para usuario_endereco
+    ALTER TABLE usuario_endereco ADD CONSTRAINT FK_Possui_2
+        FOREIGN KEY (fk_ENDERECO_id)
+        REFERENCES endereco (ID);
 
-/*FK de GESTOR,ENDERECO para FILIAL*/
-ALTER TABLE FILIAL ADD CONSTRAINT FK_FILIAL_2
-    FOREIGN KEY (FK_ENDERECO)
-    REFERENCES ENDERECO (id);
-ALTER TABLE FILIAL ADD CONSTRAINT FK_FILIAL_3
-    FOREIGN KEY (FK_GESTOR)
-    REFERENCES GESTOR (id);
-
-
-/*Arrumar*/
-/*FK de CANDIDATO,VAGA para Concorre*/
-
-ALTER TABLE CONCORRE ADD CONSTRAINT FK_CONCORRE_2
-    FOREIGN KEY (FK_CANDIDATO)
-    REFERENCES candidato (id_candidato);
-
-ALTER TABLE CONCORRE ADD CONSTRAINT FK_CONCORRE_3
-    FOREIGN KEY (FK_VAGA)
-    REFERENCES VAGA (id);
-
---if necessary
--- ALTER TABLE CANDIDATO DROP COLUMN FK_USUARIO_ID;
---ALTER TABLE candidato ADD COLUMN FK_USUARIO_id integer;
+    /*FK de GESTOR,ENDERECO para FILIAL*/
+    ALTER TABLE FILIAL ADD CONSTRAINT FK_FILIAL_2
+        FOREIGN KEY (FK_ENDERECO)
+        REFERENCES ENDERECO (id);
+    ALTER TABLE FILIAL ADD CONSTRAINT FK_FILIAL_3
+        FOREIGN KEY (FK_GESTOR)
+        REFERENCES GESTOR (id);
 
 
-```
+    /*Arrumar*/
+    /*FK de CANDIDATO,VAGA para Concorre*/
 
+    ALTER TABLE CONCORRE ADD CONSTRAINT FK_CONCORRE_2
+        FOREIGN KEY (FK_CANDIDATO)
+        REFERENCES candidato (id_candidato);
+
+    ALTER TABLE CONCORRE ADD CONSTRAINT FK_CONCORRE_3
+        FOREIGN KEY (FK_VAGA)
+        REFERENCES VAGA (id);
+
+    --if necessary
+    -- ALTER TABLE CANDIDATO DROP COLUMN FK_USUARIO_ID;
+    --ALTER TABLE candidato ADD COLUMN FK_USUARIO_id integer;
+
+
+    ```
+    </details>
         
        
 ### 8 INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-    a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-    (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
-    b) Criar um novo banco de dados para testar a restauracao 
-    (em caso de falha na restauração o grupo não pontuará neste quesito)
-    c) formato .SQL
 
-```sql
-/* Inserts */
+- <details>
+    <summary>Inserts</summary>
 
-insert into area (nome_area)VALUES
-('programacao'),
-('segurança'),
-('banco de dados'),
-('desenvolvimento de software'),
-('marketing'),
-('design'),
-('analista de sistemas'),
-('Engenheiro'),
-('analista de compras'),
-('assistente fiscal');
+    ```sql
+    /* Inserts */
 
-insert into cargo (nomecargo)VALUES
-('Junior'),
-('Pleno'),
-('Senior'),
-('Master'),
-('Especialista');
+    insert into area (nome_area)VALUES
+    ('programacao'),
+    ('segurança'),
+    ('banco de dados'),
+    ('desenvolvimento de software'),
+    ('marketing'),
+    ('design'),
+    ('analista de sistemas'),
+    ('Engenheiro'),
+    ('analista de compras'),
+    ('assistente fiscal');
 
-INSERT INTO usuario (nome,data_nasc)
-VALUES
-  ('Ebony Robertson','1990-06-20'),
-  ('Thaddeus Wheeler','2006-05-13'),
-  ('Kelly Rivas','2015-06-28'),
-  ('Macon Gill','2003-03-08'),
-  ('Yuri Lewis','2000-10-18'),
-  ('Abdul Goff','2022-02-08'),
-  ('Porter Cotton','1993-03-01'),
-  ('Tad Roth','2007-01-01'),
-  ('Lysandra Mclaughlin','1994-08-27'),
-  ('Mariam Dennis','2006-11-03');
+    insert into cargo (nomecargo)VALUES
+    ('Junior'),
+    ('Pleno'),
+    ('Senior'),
+    ('Master'),
+    ('Especialista');
+
+    INSERT INTO usuario (nome,data_nasc)
+    VALUES
+    ('Ebony Robertson','1990-06-20'),
+    ('Thaddeus Wheeler','2006-05-13'),
+    ('Kelly Rivas','2015-06-28'),
+    ('Macon Gill','2003-03-08'),
+    ('Yuri Lewis','2000-10-18'),
+    ('Abdul Goff','2022-02-08'),
+    ('Porter Cotton','1993-03-01'),
+    ('Tad Roth','2007-01-01'),
+    ('Lysandra Mclaughlin','1994-08-27'),
+    ('Mariam Dennis','2006-11-03');
 
 
 
-  
-INSERT INTO pais (nome_pais)
-VALUES
-  ('Portugal'), --
-  ('China'), --
-  ('Germany'), --
-  ('Indonesia'), --
-  ('United Kingdom'),--
-  ('France'), --
-  ('México'), --
-  ('Spain'), --
-  ('Colombia'),
-  ('Brasil'), --
-  ('United States of America'); --
+    
+    INSERT INTO pais (nome_pais)
+    VALUES
+    ('Portugal'), --
+    ('China'), --
+    ('Germany'), --
+    ('Indonesia'), --
+    ('United Kingdom'),--
+    ('France'), --
+    ('México'), --
+    ('Spain'), --
+    ('Colombia'),
+    ('Brasil'), --
+    ('United States of America'); --
 
 
-INSERT INTO estado (nome_estado,fk_id_pais)
-VALUES 
-  ('Tabasco',7), -- Mexico ++
-  ('Maranhão',10), -- Brasil ++
-  ('Baja California',7), -- México ++
-  ('Puebla',7), -- MExico ++
-  ('Colorado',11), -- EUA ++
-  ('Minnesota')11, -- EUA ++
-  ('Dōngběi',2), -- China ++
-  ('São Paulo',10), --Brasil ++
-  ('Utah',11), -- EUA ++
-  ('Michoacán',7), -- Mexico 
-  ('Catalunha',8), -- portugal ++
-  ('Baviera',3), --Alemanha ++
-  ('Suffolk',5), -- Reino Unido - Inglaterra ++
-  ('Córsega',6), -- França ++
-  ('Java',4), -- Indonésia ++
-  ('Lisboa',1), --portugal ++
-  ('Boyacá',9), -- Colombia ++
-  ('California',11); -- EUA ++
+    INSERT INTO estado (nome_estado,fk_id_pais)
+    VALUES 
+    ('Tabasco',7), -- Mexico ++
+    ('Maranhão',10), -- Brasil ++
+    ('Baja California',7), -- México ++
+    ('Puebla',7), -- MExico ++
+    ('Colorado',11), -- EUA ++
+    ('Minnesota')11, -- EUA ++
+    ('Dōngběi',2), -- China ++
+    ('São Paulo',10), --Brasil ++
+    ('Utah',11), -- EUA ++
+    ('Michoacán',7), -- Mexico 
+    ('Catalunha',8), -- portugal ++
+    ('Baviera',3), --Alemanha ++
+    ('Suffolk',5), -- Reino Unido - Inglaterra ++
+    ('Córsega',6), -- França ++
+    ('Java',4), -- Indonésia ++
+    ('Lisboa',1), --portugal ++
+    ('Boyacá',9), -- Colombia ++
+    ('California',11); -- EUA ++
 
 
 
 
-INSERT INTO cidade (nome_cidade, fk_id_estado)
-VALUES
-  ('Tunja',17), -- COLOMBIA capital de [BOYACA] ++++
-  ('Denver',5), -- EUA Capital do [Colorado] ++++
-  ('Villahermosa',1),--MEXICO Capital de [TABASCO] ++++
-  ('Munique',12), -- ALEMANHA Capital de [Baviera] ++++
-  ('Ipswich',13), -- UK INGLATERRA centro Adiministrativo de [Suffolk]++
-  ('São paulo',8), -- Brasil capital de [SAO PAULO] ++++
-  ('Jacarta',15), --INDONESIA capital de [JAVA]++++
-  ('Ajaccio',14), -- FRANÇA capital de [CORSEGA] ++++(Cidade de napoleao)
-  ('Lisboa',16), -- PORTUGAL capital de [LISBOA] ++++
-  ('São Luís',2), -- BRASIL capital do [MARANHÃO] ++
-  ('Puebla',4), -- MÉXICO capital de [PUEBLA]++
-  ('Mexicali',3), -- MÉXICO capital de [BAJA CALIFORNIA] ++
-  ('Saint Paul',6), -- EUA capital de [MINESSOTA] ++++
-  ('Shenyang',7), -- CHINA capital de [DONGBEI] ++
-  ('Salt Lake City',9), --EUA capital de [UTAH] ++
-  ('Sacramento',18), --EUA capital da [CALIFORNIA] ++
-  ('Morélia',10),--MÉXICO capital de [MICHOACAN]
-  ('Barcelona',11), --ESPANHA capital da [CATALUNHA]
-  ('Los Angeles',18); -- EUA cidade da [CALIFORNIA] ++++
+    INSERT INTO cidade (nome_cidade, fk_id_estado)
+    VALUES
+    ('Tunja',17), -- COLOMBIA capital de [BOYACA] ++++
+    ('Denver',5), -- EUA Capital do [Colorado] ++++
+    ('Villahermosa',1),--MEXICO Capital de [TABASCO] ++++
+    ('Munique',12), -- ALEMANHA Capital de [Baviera] ++++
+    ('Ipswich',13), -- UK INGLATERRA centro Adiministrativo de [Suffolk]++
+    ('São paulo',8), -- Brasil capital de [SAO PAULO] ++++
+    ('Jacarta',15), --INDONESIA capital de [JAVA]++++
+    ('Ajaccio',14), -- FRANÇA capital de [CORSEGA] ++++(Cidade de napoleao)
+    ('Lisboa',16), -- PORTUGAL capital de [LISBOA] ++++
+    ('São Luís',2), -- BRASIL capital do [MARANHÃO] ++
+    ('Puebla',4), -- MÉXICO capital de [PUEBLA]++
+    ('Mexicali',3), -- MÉXICO capital de [BAJA CALIFORNIA] ++
+    ('Saint Paul',6), -- EUA capital de [MINESSOTA] ++++
+    ('Shenyang',7), -- CHINA capital de [DONGBEI] ++
+    ('Salt Lake City',9), --EUA capital de [UTAH] ++
+    ('Sacramento',18), --EUA capital da [CALIFORNIA] ++
+    ('Morélia',10),--MÉXICO capital de [MICHOACAN]
+    ('Barcelona',11), --ESPANHA capital da [CATALUNHA]
+    ('Los Angeles',18); -- EUA cidade da [CALIFORNIA] ++++
 
-INSERT INTO bairro (nome_bairro, fk_id_cidade) VALUES
-('Vila Mariana',16), --Sao paulo [Sao Paulo]
-('Ibirapuera',16), -- Sao paulo [São paulo]
-('Santo António',19), -- Portugal [Lisboa]
-('Alfama',19), -- Portugal  [Lisboa]
-('La choca',13),  -- Mexico [Villahermosa]
-('Summit Hill',23), -- EUA Minnesota [Saint Paul]
-('Chinatown',29), -- EUA California [Los angeles]
-('Maldonado',11), -- COLOMBIA [Tunja]
-('Lower Downtown',12), -- EUA [Denver]
-('Sendling',14), -- Alemanha [Munique]
-('Ipswich',15), -- UK Inglaterra [Suffolk ipswich]
-('Glodok Chinatown',17), -- Indonesia JAVA [JACARTA]
-('Bairro Genoves',18), -- França  Corsega [Ajaccio] 
-('Renascença',20), --Brasil Maranhao[São Luís]
-('Zócalo',21), -- México Puebla [PUEBLA]
-('Éguia',22), --México Baja California [Mexicali]
-('Tie xi',24), -- China Dongbei [Shenyang]
-('Salt Lake Valley',25), -- EUA Salt Lake City [UTAH]
-('River Park',26), -- EUA California [Sacramento]
-('El Gòtic',28), -- Espanha barcelona [Catalunha]
-('Centro Histórico',27) -- México Michoacan [morelia]
+    INSERT INTO bairro (nome_bairro, fk_id_cidade) VALUES
+    ('Vila Mariana',16), --Sao paulo [Sao Paulo]
+    ('Ibirapuera',16), -- Sao paulo [São paulo]
+    ('Santo António',19), -- Portugal [Lisboa]
+    ('Alfama',19), -- Portugal  [Lisboa]
+    ('La choca',13),  -- Mexico [Villahermosa]
+    ('Summit Hill',23), -- EUA Minnesota [Saint Paul]
+    ('Chinatown',29), -- EUA California [Los angeles]
+    ('Maldonado',11), -- COLOMBIA [Tunja]
+    ('Lower Downtown',12), -- EUA [Denver]
+    ('Sendling',14), -- Alemanha [Munique]
+    ('Ipswich',15), -- UK Inglaterra [Suffolk ipswich]
+    ('Glodok Chinatown',17), -- Indonesia JAVA [JACARTA]
+    ('Bairro Genoves',18), -- França  Corsega [Ajaccio] 
+    ('Renascença',20), --Brasil Maranhao[São Luís]
+    ('Zócalo',21), -- México Puebla [PUEBLA]
+    ('Éguia',22), --México Baja California [Mexicali]
+    ('Tie xi',24), -- China Dongbei [Shenyang]
+    ('Salt Lake Valley',25), -- EUA Salt Lake City [UTAH]
+    ('River Park',26), -- EUA California [Sacramento]
+    ('El Gòtic',28), -- Espanha barcelona [Catalunha]
+    ('Centro Histórico',27) -- México Michoacan [morelia]
 
-```
+    ```
 
+    </details>
 
 ### 9 TABELAS E PRINCIPAIS CONSULTAS<br>
 
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+- [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/Colab/GHHL_Contrat.ipynb#scrollTo=0Lwtn8mUiLjq)
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
 
 
