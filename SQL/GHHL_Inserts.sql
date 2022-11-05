@@ -49,30 +49,33 @@ VALUES
   ('México'), --
   ('Spain'), --
   ('Colombia'),
-  ('Brasil'); --
+  ('Brasil'), --
+  ('United States of America'); --
 
-INSERT INTO estado (nome_estado)
+
+INSERT INTO estado (nome_estado,fk_id_pais)
 VALUES 
-  ('Baviera'), --Alemanha ++
-  ('Suffolk'), -- Reino Unido - Inglaterra ++
-  ('Córsega'), -- França ++
-  ('Java'), -- Indonésia ++
-  ('Boyacá'), -- Colombia ++
-  ('Tabasco'), -- Mexico ++
-  ('Maranhão'), -- Brasil ++
-  ('Baja California'), -- México ++
-  ('Puebla'), -- MExico ++
-  ('Lisboa'), -- portugal ++
-  ('Barcelona'), --Espanha ++
-  ('Colorado'), -- EUA ++
-  ('Minnesota'), -- EUA ++
-  ('Dōngběi'), -- China ++
-  ('São Paulo'), --Brasil ++
-  ('Utah'), -- EUA ++
-  ('Michoacán'), -- Mexico 
-  ('California'); -- EUA ++
+  ('Tabasco',7), -- Mexico ++
+  ('Maranhão',10), -- Brasil ++
+  ('Baja California',7), -- México ++
+  ('Puebla',7), -- MExico ++
+  ('Colorado',11), -- EUA ++
+  ('Minnesota')11, -- EUA ++
+  ('Dōngběi',2), -- China ++
+  ('São Paulo',10), --Brasil ++
+  ('Utah',11), -- EUA ++
+  ('Michoacán',7), -- Mexico 
+  ('Catalunha',8), -- portugal ++
+  ('Baviera',3), --Alemanha ++
+  ('Suffolk',5), -- Reino Unido - Inglaterra ++
+  ('Córsega',6), -- França ++
+  ('Java',4), -- Indonésia ++
+  ('Lisboa',1), --portugal ++
+  ('Boyacá',9), -- Colombia ++
+  ('California',11); -- EUA ++
 
-UPDATE estado set nome_estado ='Catalunha' WHERE id=11;
+
+
 
 INSERT INTO cidade (nome_cidade, fk_id_estado)
 VALUES
