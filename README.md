@@ -421,8 +421,9 @@ ALTER TABLE CONCORRE ADD CONSTRAINT FK_CONCORRE_3
     (em caso de falha na restauração o grupo não pontuará neste quesito)
     c) formato .SQL
 
-
-<iframe src="https://raw.githubusercontent.com/jramso/Trab_BD1_2022/master/SQL/GHHL_Fisico.sql" width="600" height="780" style="border: none;"></iframe>
+<div style="height :500px; width: 100%;">
+    <embed src="https://raw.githubusercontent.com/jramso/Trab_BD1_2022/master/SQL/GHHL_Fisico.sql" type="text/html" width="100%" height="100%">
+</div>
 
 
 ```sql
