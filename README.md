@@ -422,7 +422,7 @@ ALTER TABLE CONCORRE ADD CONSTRAINT FK_CONCORRE_3
     c) formato .SQL
 
 <div style="height :500px; width: 100%;">
-    <embed src="https://raw.githubusercontent.com/jramso/Trab_BD1_2022/master/SQL/GHHL_Fisico.sql" type="text/html" width="100%" height="100%">
+    <object type="text/html" data="https://raw.githubusercontent.com/jramso/Trab_BD1_2022/master/SQL/GHHL_Fisico.sql"></object>
 </div>
 
 
