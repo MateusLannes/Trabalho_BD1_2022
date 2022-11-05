@@ -115,16 +115,6 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
     
 ### 5.MODELO CONCEITUAL<br>
 
-<!-- A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
-    B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
-        * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
-    C) Principais fluxos de informação/entidades do sistema (mínimo 3). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
-    D) Qualidade e Clareza
-        Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas (Aplicar os conceitos de normalização abordados).    -->
-
-
 
 ![Alt text](https://github.com/jramso/Trab_BD1_2022/blob/master/images/conceitual_2.jpg?raw=true "Modelo Conceitual 2.0")
     
@@ -548,7 +538,9 @@ INSERT INTO bairro (nome_bairro, fk_id_cidade) VALUES
 
 ### 9 TABELAS E PRINCIPAIS CONSULTAS<br>
 
-![Alt text](https://raw.githubusercontent.com/jramso/Trab_BD1_2022/master/Files/Colab/GHHL_Contrat.ipynb)
+<button onclick="document.location='colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/Colab/GHHL_Contrat.ipynb'"> View on Colab!</button>
+
+
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
 
