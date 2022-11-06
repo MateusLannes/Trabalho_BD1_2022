@@ -119,9 +119,20 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
     b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
     
-![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
+![Tabela GHHL Contratação](https://github.com/jramso/Trab_BD1_2022/blob/master/Files/GHHL.xlsx?raw=true "Tabela - Empresa GHHL")
+
+<details>
+    <summary>Show table</summary>
+
+| id | postal_zip | numero | fk_cidade_id | fk_bairro_id | fk_estado_id | fk_pais_id | fk_logradouro_id | id (1) | nome_bairro      | fk_id_cidade | nome_cidade  | fk_id_estado | nome_estado | fk_id_pais | nome_pais | nome             | complemento | fk_tipo_logradouro | nome_tipo       | abreviatura | telefone_fixo  | nome_fantasia                    | fk_endereco | fk_gestor | email                        | fk_usuario_id | id_tipo | nome (1)      | data_nasc  |
+|----|------------|--------|--------------|--------------|--------------|------------|------------------|--------|------------------|--------------|--------------|--------------|-------------|------------|-----------|------------------|-------------|--------------------|-----------------|-------------|----------------|----------------------------------|-------------|-----------|------------------------------|---------------|---------|---------------|------------|
+| 35 | 61235-319  | 2063   | 16           | 2            | 8            | 10         | 4                | 20     | Ibirapuera       | 16           | São paulo    | 8            | São Paulo   | 10         | Brasil    | Venice Boulevard | Apartamento | 11                 | Segunda Avenida | SEG         | 3338-7731      | GHHL Enterprise Ltda             | 35          | 12        | fusce@ghhlcontato.br         | 20            | 1       | Mariam Dennis | 2006-11-03 |
+| 27 | 735226     | 2817   | 21           | 15           | 4            | 7          | 2                | 16     | Zócalo           | 21           | Puebla       | 4            | Puebla      | 7          | México    | Venice Boulevard | Casa        | 13                 | Balneário       | BAL         | 726-6714       | GHHL Eget Venenatis   LLC        | 27          | 17        | augue.eu@ghhlcontato.de      | 16            | 2       | Abdul Goff    | 2022-02-08 |
+| 39 | 81230      | 1090   | 13           | 5            | 1            | 7          | 11               | 20     | La choca         | 13           | Villahermosa | 1            | Tabasco     | 7          | México    | Venice Boulevard | Bloco       | 6                  | Esplanada       | ESP         | 1-828-555-2009 | GHHL Velit   Incorporated        | 39          | 12        | fusce@ghhlcontato.br         | 20            | 1       | Mariam Dennis | 2006-11-03 |
+| 37 | 51159      | 4520   | 27           | 21           | 10           | 7          | 1                | 15     | Centro Histórico | 27           | Morélia      | 10           | Michoacán   | 7          | México    | Rua Alecrim      | Edificio    | 5                  | Avenida         | AV          | 1-673-775-0419 | GHHL Volutpat Nunc   Company     | 37          | 14        | vitae.posuere@ghhlcontato.co | 15            | 2       | Yuri Lewis    | 2000-10-18 |
+| 25 | 412688     | 1789   | 24           | 17           | 7            | 2          | 1                | 14     | Tie xi           | 24           | Shenyang     | 7            | Dōngběi     | 2          | China     | Rua Alecrim      | Edificio    | 5                  | Avenida         | AV          | 1-331-248-1609 | GHHL Liaoning Metus   Foundation | 25          | 16        | nunc.est@ghhlcontato.cn      | 14            | 3       | Macon Gill    | 2003-03-08 |
     
-    
+</details>   
 ### 5.MODELO CONCEITUAL<br>
 
 
