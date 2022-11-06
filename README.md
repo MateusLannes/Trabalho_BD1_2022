@@ -118,8 +118,8 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 #### 4.3 TABELA DE DADOS DO SISTEMA:
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
     b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
-    
-![Tabela GHHL Contratação](https://github.com/jramso/Trab_BD1_2022/blob/master/Files/GHHL.xlsx?raw=true "Tabela - Empresa GHHL")
+
+- :open_file_folder: <a href="https://github.com/jramso/Trab_BD1_2022/blob/master/Files/GHHL.xlsx?raw=true">Tabela - Empresa GHHL</a>
 
 <details>
     <summary>Show table</summary>
