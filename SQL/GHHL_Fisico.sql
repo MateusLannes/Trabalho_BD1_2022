@@ -213,3 +213,5 @@ ALTER TABLE cidade ADD CONSTRAINT FK_estado_1
 ALTER TABLE bairro ADD CONSTRAINT FK_cidade_1
     FOREIGN KEY (FK_id_cidade)
     REFERENCES cidade (id);
+
+alter table candidato add COLUMN fk_escolaridade INTEGER;

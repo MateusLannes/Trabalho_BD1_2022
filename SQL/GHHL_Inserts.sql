@@ -33,7 +33,17 @@ VALUES
   ('Porter Cotton','1993-03-01'),
   ('Tad Roth','2007-01-01'),
   ('Lysandra Mclaughlin','1994-08-27'),
-  ('Mariam Dennis','2006-11-03');
+  ('Mariam Dennis','2006-11-03'),
+  ('Darius Mcgowan','2001-01-11'),
+  ('Allen Avery','1980-02-21'),
+  ('Lee Lambert','2001-03-6'),
+  ('Evelyn Jarvis','1980-10-26'),
+  ('Cassidy Case','1975-10-7'),
+  ('Phelan Dillon','1987-12-1'),
+  ('Isaiah Pace','1999-01-27'),
+  ('Fuller Tate','1981-07-11'),
+  ('Gwendolyn Acosta','1977-02-6'),
+  ('Dalton Crane','1988-11-2');
 
 
 
@@ -188,3 +198,90 @@ VALUES
   ('Jenderal Sudirman','Casa',1),
   ('Rua Branca Donadio','Residencial',7);
 
+
+INSERT INTO endereco (cep,numero,fk_cidade_id,fk_bairro_id,fk_estado_id,fk_pais_id,fk_logradouro_id)
+VALUES
+  ('143337',1316,24,17,7,2,5),
+  ('FG58 5NR',4542,15,11,13,5,1),
+  ('86948',3618,12,9,5,11,1),
+  ('38429',4252,29,7,18,11,1),
+  ('412688',1789,24,17,7,2,1),
+  ('38788-24667',1565,18,13,14,6,1),
+  ('735226',2817,21,15,4,7,2),
+  ('NK7B 4WE',4718,15,11,13,5,13),
+  ('327658',1465,14,10,12,3,1),
+  ('757957',2564,14,10,12,3,7),
+  ('1066',2858,19,3,16,1,1),
+  ('425467',4982,11,18,17,9,15),
+  ('43945',1998,28,20,11,8,1),
+  ('64635',3926,14,10,12,3,1),
+  ('61235-319',2063,16,2,8,10,4),
+  ('10110',2029,17,12,15,4,1),
+  ('51159',4520,27,21,10,7,1),
+  ('727857',2202,21,15,4,7,20),
+  ('81230',1090,13,5,1,7,11),
+  ('66108',3064,18,13,14,6,1);
+
+  -- Codigos postais https://codigo-postal.co/pt-br/mexico
+
+INSERT INTO filial (telefone_fixo,nome_fantasia,fk_endereco,fk_gestor)
+VALUES
+  ('3338-7731','GHHL Enterprise Ltda',35,12),
+  ('726-6714','GHHL Eget Venenatis LLC',27,17),
+  ('1-828-555-2009','GHHL Velit Incorporated',39,12),
+  ('1-673-775-0419','GHHL Volutpat Nunc Company',37,14),
+  ('1-331-248-1609','GHHL Liaoning Metus Foundation',25,16);
+
+  INSERT INTO usuario_endereco (fk_usuario_id,fk_endereco_id)
+VALUES
+  (13,33),
+  (17,40),
+  (15,23),
+  (18,30),
+  (18,22),
+  (20,31),
+  (16,29),
+  (15,34),
+  (12,23),
+  (15,29);
+
+
+
+INSERT INTO candidato (descricao,id_candidato,fk_usuario_id,fk_escolaridade)
+VALUES
+  ('pede, malesuada vel, venenatis vel,',1,21,4),
+  ('aliquam adipiscing lacus. Ut nec',2,22,4),
+  ('Nam ligula elit, pretium et,',3,23,3),
+  ('Etiam gravida molestie arcu. Sed',4,24,2),
+  ('tellus. Suspendisse sed dolor. Fusce',5,25,2),
+  ('felis orci, adipiscing non, luctus',6,26,3),
+  ('Praesent eu nulla at sem',7,27,2),
+  ('lacus, varius et, euismod et,',8,28,4),
+  ('neque sed dictum eleifend, nunc',9,29,4),
+  ('pellentesque, tellus sem mollis dui,',10,30,3);
+
+INSERT INTO vaga (carga_horaria,fk_gestor_id,fk_cargo,fk_area)
+VALUES
+  ('36',14,3,8),
+  ('25',14,4,1),
+  ('30',20,4,3),
+  ('30',18,1,2),
+  ('25',13,1,8),
+  ('40',17,2,3),
+  ('36',17,2,4),
+  ('44',16,3,6),
+  ('44',17,4,5),
+  ('30',18,5,8);
+
+INSERT INTO concorre (fk_vaga,fk_candidato)
+VALUES
+  (8,1),
+  (1,8),
+  (3,9),
+  (2,7),
+  (8,2),
+  (3,2),
+  (4,5),
+  (6,9),
+  (5,9),
+  (8,4)
