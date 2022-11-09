@@ -289,7 +289,7 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
         FK_TIPO_LOGRADOURO Integer
     );
 
-    CREATE TABLE Possui (
+    CREATE TABLE POSSUI (
         fk_USUARIO_id Integer,
         fk_ENDERECO_FILIAL_PAIS_id integer
     );
