@@ -210,7 +210,7 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade) -->
         
-![Alt text](https://github.com/jramso/Trab_BD1_2022/blob/master/images/logico_2.jpg?raw=true "Modelo Logico")
+![Alt text](https://github.com/jramso/Trab_BD1_2022/blob/master/images/GHHL.png?raw=true "Modelo Logico")
 
 ### 7 MODELO FÍSICO<br>
 <!-- a) inclusão das instruções de criacão das estruturas em SQL/DDL (criação de tabelas, alterações, etc..)  -->
