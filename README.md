@@ -290,6 +290,11 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
         complemento VARCHAR(50),
         FK_TIPO_LOGRADOURO Integer
     );
+    
+    CREATE TABLE COMPLEMENTO (
+    id SERIAL PRIMARY KEY,
+    complemento VARCHAR(50),
+    );
 
     CREATE TABLE POSSUI (
         fk_USUARIO_id Integer,
