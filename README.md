@@ -137,7 +137,7 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 ### 5.MODELO CONCEITUAL<br>
 
 
-![Alt text](https://github.com/jramso/Trab_BD1_2022/blob/master/images/conceitual_2.jpg?raw=true "Modelo Conceitual 2.0")
+![Alt text](https://github.com/jramso/Trab_BD1_2022/blob/master/images/Modelo_Conceitual.png?raw=true "Modelo Conceitual 2.0")
     
 #### 5.1 Validação do Modelo Conceitual
 - [Grupo01]: [Josué Ramos, Luiz Sampaio, Mateus Lannes]
