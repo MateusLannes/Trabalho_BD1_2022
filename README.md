@@ -389,6 +389,11 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
         FOREIGN KEY (FK_TIPO_LOGRADOURO)
         REFERENCES TIPO_LOGRADOURO (id);
     
+    ALTER TABLE LOGRADOURO ADD CONSTRAINT FK_LOGRADOURO_3
+        FOREIGN KEY (FK_ID_COMPLEMENTO)
+        REFERENCES COMPLEMENTO (id);
+
+    
     /*altera o nome da tabela POSSUI para USUARIO_ENDERECO*/
     ALTER TABLE POSSUI RENAME TO usuario_endereco;
     -- FK de usuario para usuario_endereco
