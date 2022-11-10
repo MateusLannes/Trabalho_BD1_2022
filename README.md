@@ -287,13 +287,13 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
     CREATE TABLE LOGRADOURO (
         id SERIAL PRIMARY KEY,
         nome VARCHAR(50),
-        complemento VARCHAR(50),
-        FK_TIPO_LOGRADOURO Integer
+        FK_TIPO_LOGRADOURO Integer,
+        FK_ID_COMPLEMENTO Integer
     );
     
     CREATE TABLE COMPLEMENTO (
         id SERIAL PRIMARY KEY,
-        complemento VARCHAR(50)
+        complemento VARCHAR(45)
     );
 
     CREATE TABLE POSSUI (
