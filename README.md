@@ -638,8 +638,8 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
     ('Balneário','BAL');
 
 
-INSERT INTO logradouro (nome,fk_id_complemento,fk_tipo_logradouro)
-VALUES
+    INSERT INTO logradouro (nome,fk_id_complemento,fk_tipo_logradouro)
+    VALUES
     ('Rua Alecrim',1,5),
     ('Venice Boulevard',2,13),
     ('Rua Branca Donadio',3,1),
@@ -660,6 +660,14 @@ VALUES
     ('16th Street Mall',1,2),
     ('Jenderal Sudirman',2,1),
     ('Rua Branca Donadio',5,7);
+    
+    INSERT INTO complemento (complemento)
+    VALUES
+    ('Edificio'),
+    ('Casa'),
+    ('Bloco'),
+    ('apartamento'),
+    ('Residencial');
 
 
     INSERT INTO endereco (cep,numero,fk_cidade_id,fk_bairro_id,fk_estado_id,fk_pais_id,fk_logradouro_id)
