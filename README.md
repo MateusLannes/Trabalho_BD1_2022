@@ -192,6 +192,8 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 |    **LOGRADOURO**   |        -       | **Tabela que armazena logradouros de ENDERECO**                                             |
 |        **-**        |       id       | identificador de logradouro                                                                 |
 |        **-**        |      nome      | nome do logradouro                                                                          |
+|    **COMPLEMENTO**  |        -       | **Tabela que armazena complementos de LOGRADOURO**                                          |
+|        **-**        |       id       | identificador de complemento                                                                |
 |        **-**        |   complemento  | complemento do logradouro ex: casa, apartamento                                             |
 | **TIPO_LOGRADOURO** |        -       | **Tabela que armazena os tipos possiveis de LOGRADOURO**                                    |
 |        **-**        |       id       | identificador de tipo de logradouro                                                         |
