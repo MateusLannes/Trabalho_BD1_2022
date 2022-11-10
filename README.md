@@ -292,8 +292,8 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
     );
     
     CREATE TABLE COMPLEMENTO (
-    id SERIAL PRIMARY KEY,
-    complemento VARCHAR(50),
+        id SERIAL PRIMARY KEY,
+        complemento VARCHAR(50)
     );
 
     CREATE TABLE POSSUI (
