@@ -638,28 +638,28 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
     ('Balneário','BAL');
 
 
-    INSERT INTO logradouro (nome,complemento,fk_tipo_logradouro)
-    VALUES
-    ('Rua Alecrim','Edificio',5),
-    ('Venice Boulevard','Casa',13),
-    ('Rua Branca Donadio','Bloco',1),
-    ('Venice Boulevard','Apartamento',11),
-    ('Sheng Li Nan Jie','Casa',7),
-    ('Sheng Li Nan Jie','Edificio',9),
-    ('Freemont Street','Edificio',11),
-    ('16th Street Mall','Apartamento',3),
-    ('16th Street Mall','Apartamento',12),
-    ('Av. Calouste Gulbenkian','Casa',8),
-    ('Venice Boulevard','Bloco',6),
-    ('Av. Calouste Gulbenkian','Apartamento',12),
-    ('Jenderal Sudirman','Bloco',6),
-    ('Rua Branca Donadio','Casa',1),
-    ('Travessa Vinte e Sete','Edificio',12),
-    ('Travessa Vinte e Sete','Bloco',8),
-    ('Travessa Vinte e Sete','Residencial',1),
-    ('16th Street Mall','Edificio',2),
-    ('Jenderal Sudirman','Casa',1),
-    ('Rua Branca Donadio','Residencial',7);
+INSERT INTO logradouro (nome,fk_id_complemento,fk_tipo_logradouro)
+VALUES
+    ('Rua Alecrim',1,5),
+    ('Venice Boulevard',2,13),
+    ('Rua Branca Donadio',3,1),
+    ('Venice Boulevard',4,11),
+    ('Sheng Li Nan Jie',2,7),
+    ('Sheng Li Nan Jie',1,9),
+    ('Freemont Street',1,11),
+    ('16th Street Mall',4,3),
+    ('16th Street Mall',4,12),
+    ('Av. Calouste Gulbenkian',2,8),
+    ('Venice Boulevard',3,6),
+    ('Av. Calouste Gulbenkian',4,12),
+    ('Jenderal Sudirman',3,6),
+    ('Rua Branca Donadio',2,1),
+    ('Travessa Vinte e Sete',1,12),
+    ('Travessa Vinte e Sete',3,8),
+    ('Travessa Vinte e Sete',5,1),
+    ('16th Street Mall',1,2),
+    ('Jenderal Sudirman',2,1),
+    ('Rua Branca Donadio',5,7);
 
 
     INSERT INTO endereco (cep,numero,fk_cidade_id,fk_bairro_id,fk_estado_id,fk_pais_id,fk_logradouro_id)
