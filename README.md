@@ -770,6 +770,7 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)
+- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=LtuFG9rexB6y)
 
 #### 9.3 CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
