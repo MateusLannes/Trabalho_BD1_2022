@@ -770,7 +770,7 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)
-- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=LtuFG9rexB6y)
+- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=crYVyeuI5sem)
 
 #### 9.3 CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
@@ -780,30 +780,38 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
-
+- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=eT-RFvf7oc_H)
 
 #### 9.5 INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     a) Criar minimo 3 de exclusão
     b) Criar minimo 3 de atualização
+ - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=84IO3mP33d1q)
+
 
 
 #### 9.6 CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+ - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=k0FdGu2g5-Dp)
 
 #### 9.7 CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
+ - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=3yd2Kae5HS4l)
 
 #### 9.8 CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
+- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=I7pI0QWHgaoA)
 
 #### 9.9 CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=v_-La9-dlDhe)
 
+#### 9.8 CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
 #### 9.10 SUBCONSULTAS (Mínimo 4)<br>
      a) Criar minimo 1 envolvendo GROUP BY
      b) Criar minimo 1 envolvendo algum tipo de junção
+- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=xjhDpcmlenqC)
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
