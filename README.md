@@ -234,6 +234,7 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
     CREATE TABLE VAGA (
         ID SERIAL PRIMARY KEY,
         carga_horaria Integer,
+        data_fim date,
         FK_GESTOR_Id integer,
         FK_CARGO Integer,
         FK_AREA Integer
