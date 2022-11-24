@@ -175,28 +175,29 @@ VALUES
   ('Balneário','BAL');
 
 
-INSERT INTO logradouro (nome,complemento,fk_tipo_logradouro)
+INSERT INTO logradouro (nome,complemento,fk_id_complemento,fk_tipo_logradouro)
 VALUES
-  ('Rua Alecrim','Edificio',5),
-  ('Venice Boulevard','Casa',13),
-  ('Rua Branca Donadio','Bloco',1),
-  ('Venice Boulevard','Apartamento',11),
-  ('Sheng Li Nan Jie','Casa',7),
-  ('Sheng Li Nan Jie','Edificio',9),
-  ('Freemont Street','Edificio',11),
-  ('16th Street Mall','Apartamento',3),
-  ('16th Street Mall','Apartamento',12),
-  ('Av. Calouste Gulbenkian','Casa',8),
-  ('Venice Boulevard','Bloco',6),
-  ('Av. Calouste Gulbenkian','Apartamento',12),
-  ('Jenderal Sudirman','Bloco',6),
-  ('Rua Branca Donadio','Casa',1),
-  ('Travessa Vinte e Sete','Edificio',12),
-  ('Travessa Vinte e Sete','Bloco',8),
-  ('Travessa Vinte e Sete','Residencial',1),
-  ('16th Street Mall','Edificio',2),
-  ('Jenderal Sudirman','Casa',1),
-  ('Rua Branca Donadio','Residencial',7);
+  ('Rua Alecrim',1,5),
+  ('Venice Boulevard',2,13),
+  ('Rua Branca Donadio',3,1),
+  ('Venice Boulevard',4,11),
+  ('Sheng Li Nan Jie',2,7),
+  ('Sheng Li Nan Jie',2,9),
+  ('Freemont Street',1,11),
+  ('16th Street Mall',4,3),
+  ('16th Street Mall',4,12),
+  ('Av. Calouste Gulbenkian',2,8),
+  ('Venice Boulevard',3,6),
+  ('Av. Calouste Gulbenkian',4,12),
+  ('Jenderal Sudirman',3,6),
+  ('Rua Branca Donadio',2,1),
+  ('Travessa Vinte e Sete',1,12),
+  ('Travessa Vinte e Sete',3,8),
+  ('Travessa Vinte e Sete',5,1),
+  ('16th Street Mall',1,2),
+  ('Jenderal Sudirman',2,1),
+  ('Rua Branca Donadio',5,7);
+
 
 
 INSERT INTO endereco (cep,numero,fk_cidade_id,fk_bairro_id,fk_estado_id,fk_pais_id,fk_logradouro_id)
@@ -243,7 +244,17 @@ VALUES
   (16,29),
   (15,34),
   (12,23),
-  (15,29);
+  (15,29),
+  (20,32),
+  (21,32),
+  (23,25),
+  (23,24),
+  (29,29),
+  (22,26),
+  (22,22),
+  (22,27),
+  (23,23),
+  (26,32);
 
 
 
@@ -273,15 +284,18 @@ VALUES
   ('44',17,4,5),
   ('30',18,5,8);
 
+alter table concorre add COLUMN data_inscricao date;
 INSERT INTO concorre (fk_vaga,fk_candidato)
 VALUES
-  (8,1),
-  (1,8),
-  (3,9),
-  (2,7),
-  (8,2),
-  (3,2),
-  (4,5),
-  (6,9),
-  (5,9),
-  (8,4)
+  (8,1,'2011-12-05'),
+  (1,8,'2021-07-24'),
+  (3,9,'2016-01-28'),
+  (2,7,'2010-12-25'),
+  (8,2,'2014-11-27'),
+  (3,2,'2012-05-12'),
+  (4,5,'2010-07-19'),
+  (6,9,'2014-12-18'),
+  (5,9,'2009-11-27'),
+  (8,4,'2017-25-06');
+
+

@@ -763,7 +763,7 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 
 ### 9 TABELAS E PRINCIPAIS CONSULTAS<br>
 
-- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/Colab/GHHL_Contrat.ipynb#scrollTo=0Lwtn8mUiLjq)
+- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb)
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
 
 
