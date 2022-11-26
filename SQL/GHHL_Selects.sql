@@ -119,3 +119,44 @@ WHERE v.carga_horaria>
     from vaga
     where vaga.fk_area = a.id)
 GROUP BY a.id,v.carga_horaria,c.nomecargo;
+
+SELECT u.nome 
+FROM usuario u JOIN usuario_endereco as ue 
+on(u.id=ue.fk_usuario_id)
+JOIN endereco as e 
+on(e.id=ue.fk_endereco_id);
+
+SELECT DISTINCT u.nome
+from usuario as u 
+JOIN usuario_endereco as ue 
+on(u.id=ue.fk_usuario_id)
+JOIN endereco as e 
+on(e.id=ue.fk_endereco_id) where e.fk_pais_id=(
+    SELECT en.fk_pais_id from endereco as en join filial as f
+    on(f.fk_endereco=en.id)where f.nome_fantasia='GHHL Eget Venenatis LLC');
+
+
+SELECT en.fk_pais_id from endereco as en join filial as f
+    on(f.fk_endereco=en.id)where f.nome_fantasia='GHHL Eget Venenatis LLC';
+
+
+SELECT count(l.id) as "Qtd de Logradouros",c.complemento as "Complementos" from logradouro as l
+join complemento as c on(l.fk_id_complemento=c.id)
+GROUP BY c.complemento;
+
+
+SELECT u.nome, Extract(YEAR from CURRENT_DATE)-EXTRACT(YEAR from u.data_nasc) as "Idade" from usuario as u where 
+avg(Max(Extract(YEAR from CURRENT_DATE)-EXTRACT(YEAR from u.data_nasc)));
+
+
+Select us.nome,(Extract(YEAR from CURRENT_DATE)-EXTRACT(YEAR from us.data_nasc)) as "Idade" 
+FROM usuario as us 
+where Extract(Year from us.data_nasc) < (SELECT avg(Extract(YEAR 
+    from u.data_nasc)) 
+    from usuario as u);
+
+
+(SELECT sum(Extract(YEAR from CURRENT_DATE)-EXTRACT(YEAR from u.data_nasc))/Count(u.id) as "Idade Média" FROM usuario as u);
+
+SELECT avg(Extract(YEAR from u.data_nasc)) from usuario as u;
+
