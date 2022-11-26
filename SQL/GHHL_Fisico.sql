@@ -6,7 +6,6 @@ CREATE TABLE USUARIO (
     nome VARCHAR(50),
     data_nasc date
 );
-
 CREATE TABLE VAGA (
     ID SERIAL PRIMARY KEY,
     carga_horaria Integer,
@@ -14,7 +13,6 @@ CREATE TABLE VAGA (
     FK_CARGO Integer,
     FK_AREA Integer
 );
-
 CREATE TABLE CANDIDATO (
     descricao VARCHAR(50),
     qualificacao VARCHAR(50),

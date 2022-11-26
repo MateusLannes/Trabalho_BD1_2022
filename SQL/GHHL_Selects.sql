@@ -87,4 +87,35 @@ JOIN area as a on(v.fk_cargo=a.id)
 GROUP BY a.nome_area;
 
 
-SELECT g.id;
+select u.nome, from usuario as u 
+join usuario_endereco as ue 
+on(u.id=ue.fk_usuario_id)
+join endereco as en on(en.id=ue.fk_endereco_id) ;
+
+select f.nome_fantasia
+    from filial as f join endereco as e on(f.fk_endereco=e.id) WHERE e.fk_pais_id=7;
+
+(select u.nome
+from usuario as u 
+join usuario_endereco as ue 
+on(u.id=ue.fk_usuario_id)
+join endereco as en on(en.id=ue.fk_endereco_id) 
+WHERE en.fk_pais_id=7)
+union
+(select f.nome_fantasia
+from filial as f 
+join endereco as e 
+on(f.fk_endereco=e.id) 
+WHERE e.fk_pais_id=7);
+
+
+
+select a.nome_area as "Profissão",c.nomecargo as "Nível",v.carga_horaria "Carga Horária"
+from area as a 
+join vaga as v on(v.fk_area=a.id)
+join cargo as c on(c.id=v.fk_cargo)
+WHERE v.carga_horaria>
+    (select coalesce(avg(vaga.carga_horaria),0) as "Média CH"
+    from vaga
+    where vaga.fk_area = a.id)
+GROUP BY a.id,v.carga_horaria,c.nomecargo;
