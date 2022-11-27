@@ -51,6 +51,7 @@
 - :white_check_mark:[10.Relatórios e Gráficos](#10-relatórios-e-gráficos)
 - :white_check_mark:[11.Pecha Kucha e Vídeo](#11-ajustes-da-documentação-criação-dos-slides-e-vídeo-para-apresentaçao-final)
 </details>
+
 ***
 
 ### 1. COMPONENTES<br>
@@ -842,10 +843,10 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 <br>
 <br> 
 
-Vídeo: https://youtu.be/ogsBeCYUbHM
-Modelo (Pecha Kucha): https://docs.google.com/presentation/d/1t3PGappsjo7njGhE_sQihU5M9eisF6YTCb7x25wpusA/edit?usp=sharing
+- Vídeo: https://youtu.be/ogsBeCYUbHM
+- Modelo (Pecha Kucha): https://docs.google.com/presentation/d/1t3PGappsjo7njGhE_sQihU5M9eisF6YTCb7x25wpusA/edit?usp=sharing
 
-Modelo Pecha Kucha: https://docs.google.com/presentation/d/e/2PACX-1vSktrqcS2rg0pbFpsHRT8DBS3hymJQ3isLyZhXQNVE5xW5xoF-gDdqUB91XJe18Ipc2oZDT9CiOD8Z4/pub?start=true&loop=true&delayms=5000
+- Modelo Pecha Kucha: https://docs.google.com/presentation/d/e/2PACX-1vSktrqcS2rg0pbFpsHRT8DBS3hymJQ3isLyZhXQNVE5xW5xoF-gDdqUB91XJe18Ipc2oZDT9CiOD8Z4/pub?start=true&loop=true&delayms=5000
 <!-- 
 ### 12 FORMATACAO NO GIT:<br> 
 https://help.github.com/articles/basic-writing-and-formatting-syntax/
