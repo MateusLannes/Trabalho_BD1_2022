@@ -50,6 +50,7 @@
 
 - :white_check_mark:[10.Relatórios e Gráficos](#10-relatórios-e-gráficos)
 - :white_check_mark:[11.Pecha Kucha e Vídeo](#11-ajustes-da-documentação-criação-dos-slides-e-vídeo-para-apresentaçao-final)
+
 </details>
 
 ***
