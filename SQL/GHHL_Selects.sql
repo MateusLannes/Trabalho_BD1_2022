@@ -160,3 +160,18 @@ where Extract(Year from us.data_nasc) < (SELECT avg(Extract(YEAR
 
 SELECT avg(Extract(YEAR from u.data_nasc)) from usuario as u;
 
+--#Gestor de vagas que respondem a gestores de filiais que respondem a um gestor geral
+SELECT ug.nome as "Gestor Geral",gg.email as "Email GG",
+ uf.nome as "Gestor de Filial", gf.email as "Email GF",
+ u.nome  as "Gestor de vagas", gv.email as "Email GV"
+From Gestor as gg join usuario as ug on(gg.fk_usuario_id=ug.id),
+Gestor as gf join usuario as uf on(uf.id=gf.fk_usuario_id), 
+gestor as gv join usuario as u on(gv.fk_usuario_id=u.id)
+WHERE gg.id_tipo=1 and gf.id_tipo=3 and gv.id_tipo=2;
+
+
+select e.id, e.postal_zip, e.numero, count(em.id) as "Endereços no mesmo Estado"
+FROM endereco as  e join endereco as em 
+on(e.fk_estado_id=em.fk_estado_id)
+where e.fk_pais_id=7
+group by e.id;

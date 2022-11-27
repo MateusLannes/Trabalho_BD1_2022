@@ -32,20 +32,25 @@
 <summary><strong style="font-size:20px;"> Entrega 2 </strong></summary>
 
 ***
-- - :white_large_square: [9.2 Consulta das tabelas com filtros `WHERE`](#92-consultas-das-tabelas-com-filtros-where-mínimo-4)
-  - :white_large_square: [9.3 Consultas L.A e tabelas ou campos renomeados](#93-consultas-que-usam-operadores-lógicos-aritméticos-e-tabelas-ou-campos-renomeados-mínimo-11)
-  - :white_large_square: [9.4 Consultas `Like` e `Datas`](#94-consultas-que-usam-operadores-like-e-datas-mínimo-12)
-  - :white_large_square: [9.5 Instruções aplicando atualização e exclusão de dados](#95-instruções-aplicando-atualização-e-exclusão-de-dados-mínimo-6)
-  - :white_large_square: [9.6 Consultas com `INNER JOIN` e `ORDER BY`](#96-consultas-com-inner-join-e-order-by-mínimo-6)
-  - :white_large_square: [9.7 Consultas com `GROUP BY` e funções de agrupamento](#97-consultas-com-group-by-e-funções-de-agrupamento-mínimo-6)
-  - :white_large_square: [9.8 Consultas com `LEFT`, `RIGHT` e `FULL JOIN`](#98-consultas-com-left-right-e-full-join-mínimo-4)
-  - :white_large_square: [9.9 Consultas com `SELF JOIN` e `VIEW`](#99-consultas-com-self-join-e-view-mínimo-6)
-  - :white_large_square: [9.10 Subconsultas](#910-subconsultas-mínimo-4)
+- - :white_check_mark: [9.2 Consulta das tabelas com filtros `WHERE`](#92-consultas-das-tabelas-com-filtros-where-mínimo-4)
+  - :white_check_mark: [9.3 Consultas L.A e tabelas ou campos renomeados](#93-consultas-que-usam-operadores-lógicos-aritméticos-e-tabelas-ou-campos-renomeados-mínimo-11)
+  - :white_check_mark: [9.4 Consultas `Like` e `Datas`](#94-consultas-que-usam-operadores-like-e-datas-mínimo-12)
+  - :white_check_mark: [9.5 Instruções aplicando atualização e exclusão de dados](#95-instruções-aplicando-atualização-e-exclusão-de-dados-mínimo-6)
+  - :white_check_mark: [9.6 Consultas com `INNER JOIN` e `ORDER BY`](#96-consultas-com-inner-join-e-order-by-mínimo-6)
+  - :white_check_mark: [9.7 Consultas com `GROUP BY` e funções de agrupamento](#97-consultas-com-group-by-e-funções-de-agrupamento-mínimo-6)
+  - :white_check_mark: [9.8 Consultas com `LEFT`, `RIGHT` e `FULL JOIN`](#98-consultas-com-left-right-e-full-join-mínimo-4)
+  - :white_check_mark: [9.9 Consultas com `SELF JOIN` e `VIEW`](#99-consultas-com-self-join-e-view-mínimo-6)
+  - :white_check_mark: [9.10 Subconsultas](#910-subconsultas-mínimo-4)
 
 </details>
 
 ***
-## Entrega 3
+<details>
+    <summary> <strong style="font-size:20px;">Entrega 3</strong> </summary>
+
+- :white_check_mark:[10.Relatórios e Gráficos](#10-relatórios-e-gráficos)
+- :white_check_mark:[11.Pecha Kucha e Vídeo](#11-ajustes-da-documentação-criação-dos-slides-e-vídeo-para-apresentaçao-final)
+</details>
 ***
 
 ### 1. COMPONENTES<br>
@@ -89,21 +94,28 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
 <!-- a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? -->
 >O sistema proposto `GHHL Contratação` fornecera relatórios sobre os usuários do sistema, vagas e filiais.
+- Usuários possuem múltiplos endereços?
+- Quais áreas os candidatos mais se inscrevem?
+- Dentre os gestores que tipos de gestores tem em maior quantidade e por que?
+- Quais vagas possuem uma carga horária mais extensa do que o normal? Ou seja, com uma carga horária acima da média?
+- Como é o local que a maioria dos usuários do sistema reside? em Casas? apartamentos? edifícios?
+- Como as vagas são majoritariamente de tecnologia, ela atende também pessoas um pouco mais velhas ou apenas os jovens?
 <!-- b) 5 principais relatório do sistema proposto! -->
  
 > A Empresa `GHHL Contratação` precisa inicialmente dos seguintes relatórios: 
-- I: Relatório de todos os usuários do sistema.
-    - Engloba todos os funcionarios da empresa, só usuários, gestores e candidatos
-- II: Relatório de candidatos cadastrados em vagas.
-    - Engloba os candidatos, vagas, cargos e areas.
-- III: Relatório de gerentes por filial.
-    - engloba gestores, tipos de gestores e filiais.
-- IV: Relatório de todas as vagas.
-    - engloba vagas, cargos e areas.
-- V: Relátorio de usuários cujo o endereço mais proximos de cada filial.
-    engloba usuários, endereço, logradouro, bairro, cidade, estado, país.
-- VI: Relatório geral de todo o sistema:
-    engloba todas as relações do sistema, melhor vista em [4.3]().
+
+- I: Objetivo: Relatório de quantidade de endereços (casas) um usuário possui
+    - Engloba Entidades: Usuario e Endereco
+- II: Objetivo: Relatorio da Area profissional mais desejada.
+    - Engloba Entidades: Candidato, Vaga e Area.
+- III: Objetivo: Relatório de gerentes por tipos de gerentes.
+    - Engloba gestores, tipos de gestores.
+- IV: Objetivo: Relatório de vagas que possuem Carga horária acima da média das suas respectivas Areas
+    - Engloba Entidades: Vaga e Area
+- V: Objetivo: Relatório da quantidade de logradouros por tipos de complemento
+    - Engloba Entidades: Logradouro e Complemento
+- VI: Objetivo: Usuários com idade superior a média de idade
+    - Engloba Entidade: Usuários
     
 <!-- A Empresa DevCom precisa inicialmente dos seguintes relatórios:
 * Relatório que mostre o nome de cada supervisor(a) e a quantidade de empregados supervisionados.
@@ -116,13 +128,12 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
  
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
-    a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
-    b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
+
 
 - :open_file_folder: <a href="https://github.com/jramso/Trab_BD1_2022/blob/master/Files/GHHL.xlsx?raw=true">Tabela - Empresa GHHL</a>
 
 <details>
-    <summary>Show table</summary>
+    <summary>TABELA DE DADOS DO SISTEMA</summary>
 
 | id | postal_zip | numero | fk_cidade_id | fk_bairro_id | fk_estado_id | fk_pais_id | fk_logradouro_id | id (1) | nome_bairro      | fk_id_cidade | nome_cidade  | fk_id_estado | nome_estado | fk_id_pais | nome_pais | nome             | complemento | fk_tipo_logradouro | nome_tipo       | abreviatura | telefone_fixo  | nome_fantasia                    | fk_endereco | fk_gestor | email                        | fk_usuario_id | id_tipo | nome (1)      | data_nasc  |
 |----|------------|--------|--------------|--------------|--------------|------------|------------------|--------|------------------|--------------|--------------|--------------|-------------|------------|-----------|------------------|-------------|--------------------|-----------------|-------------|----------------|----------------------------------|-------------|-----------|------------------------------|---------------|---------|---------------|------------|
@@ -135,7 +146,6 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 </details>   
 
 ### 5.MODELO CONCEITUAL<br>
-
 
 ![Alt text](https://github.com/jramso/Trab_BD1_2022/blob/master/images/Modelo_Conceituall.png?raw=true "Modelo Conceitual 2.0")
     
@@ -207,7 +217,8 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br> -->
 
 
-### 6 MODELO LÓGICO<br>
+### 6 MODELO LÓGICO
+<br>
 <!-- a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade) -->
@@ -774,68 +785,68 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=crYVyeuI5sem)
 
 #### 9.3 CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
+- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=v_-La9-dlDhe)
+<!-- a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas -->
 
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    b) Criar uma consulta para cada tipo de função data apresentada.
+<!-- a) Criar outras 5 consultas que envolvam like ou ilike
+    b) Criar uma consulta para cada tipo de função data apresentada. -->
 - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=eT-RFvf7oc_H)
 
 #### 9.5 INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    a) Criar minimo 3 de exclusão
-    b) Criar minimo 3 de atualização
+<!-- a) Criar minimo 3 de exclusão
+    b) Criar minimo 3 de atualização -->
  - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=84IO3mP33d1q)
 
 
 
 #### 9.6 CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
-    a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
-    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+<!-- a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
+    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho -->
  - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=k0FdGu2g5-Dp)
 
 #### 9.7 CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
-    a) Criar minimo 2 envolvendo algum tipo de junção
+<!-- a) Criar minimo 2 envolvendo algum tipo de junção -->
  - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=3yd2Kae5HS4l)
 
 #### 9.8 CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
-    a) Criar minimo 1 de cada tipo
+<!-- a) Criar minimo 1 de cada tipo -->
 - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=I7pI0QWHgaoA)
 
 #### 9.9 CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+<!-- a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
+        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho -->
 - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=v_-La9-dlDhe)
-
-#### 9.8 CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
 #### 9.10 SUBCONSULTAS (Mínimo 4)<br>
-     a) Criar minimo 1 envolvendo GROUP BY
-     b) Criar minimo 1 envolvendo algum tipo de junção
+<!-- a) Criar minimo 1 envolvendo GROUP BY
+     b) Criar minimo 1 envolvendo algum tipo de junção -->
 - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=xjhDpcmlenqC)
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
 ### 10 RELATÓRIOS E GRÁFICOS
 
-#### a) análises e resultados provenientes do banco de dados desenvolvido (usar modelo disponível)
+<!-- #### a) análises e resultados provenientes do banco de dados desenvolvido (usar modelo disponível)
 #### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
-#### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
+#### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível. -->
 
-    
-
+- :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=Cj1XGeWMHkhS)
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
-#### a) Modelo (pecha kucha)<br>
-#### b) Tempo de apresentação 6:40 
+
 
 ># Marco de Entrega 03: Itens 10 e 11<br>
 <br>
 <br>
 <br> 
 
+Vídeo: https://youtu.be/ogsBeCYUbHM
+Modelo (Pecha Kucha): https://docs.google.com/presentation/d/1t3PGappsjo7njGhE_sQihU5M9eisF6YTCb7x25wpusA/edit?usp=sharing
 
-
+Modelo Pecha Kucha: https://docs.google.com/presentation/d/e/2PACX-1vSktrqcS2rg0pbFpsHRT8DBS3hymJQ3isLyZhXQNVE5xW5xoF-gDdqUB91XJe18Ipc2oZDT9CiOD8Z4/pub?start=true&loop=true&delayms=5000
+<!-- 
 ### 12 FORMATACAO NO GIT:<br> 
 https://help.github.com/articles/basic-writing-and-formatting-syntax/
 <comentario no git>
@@ -854,6 +865,7 @@ https://help.github.com/articles/basic-writing-and-formatting-syntax/
     https://guides.github.com/features/mastering-markdown/
 
     
+
 ### OBSERVAÇÕES IMPORTANTES
 
 #### Todos os arquivos que fazem parte do projeto (Imagens, pdfs, arquivos fonte, etc..), devem estar presentes no GIT. Os arquivos do projeto vigente não devem ser armazenados em quaisquer outras plataformas.
@@ -871,5 +883,5 @@ http://www.sis4.com/brModelo/download.html
 
 Link para curso de GIT<br>
 ![https://www.youtube.com/curso_git](https://www.youtube.com/playlist?list=PLo7sFyCeiGUdIyEmHdfbuD2eR4XPDqnN2?raw=true "Title")
-
+ -->
 
