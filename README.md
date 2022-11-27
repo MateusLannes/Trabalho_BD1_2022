@@ -49,7 +49,7 @@
     <summary> <strong style="font-size:20px;">Entrega 3</strong> </summary>
 
 - :white_check_mark:[10. Relatórios e Gráficos](#10-relatórios-e-gráficos)
-- :white_check_mark:[11. Pecha Kucha e Vídeo](#11-ajustes-da-documentação-criação-dos-slides-e-vídeo-para-apresentaçao-final-)
+- :white_check_mark:[11. Pecha Kucha e Vídeo](#11-ajustes-da-documentação-criação-dos-slides-e-vídeo-para-apresentaçao-final)
 
 </details>
 
@@ -835,6 +835,7 @@ Link:[Protótipo Figma](https://www.figma.com/file/dNvctCDrX3DbqgeguQBRIV/Contra
 #### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível. -->
 
 - :computer: [Link do Colab](https://colab.research.google.com/github/jramso/Trab_BD1_2022/blob/master/Files/ColabGHHL_Contrat.ipynb#scrollTo=Cj1XGeWMHkhS)
+
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL
 
 
