@@ -1,5 +1,5 @@
 -- Active: 1667587040170@@127.0.0.1@5432@postgres@public
-/* GHHL_Logico: */
+/* GHHL_Logico:  */
 
 CREATE TABLE USUARIO (
     id SERIAL PRIMARY KEY,
