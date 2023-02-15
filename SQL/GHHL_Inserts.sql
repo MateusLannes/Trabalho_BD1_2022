@@ -154,9 +154,11 @@ update gestor set id_tipo=1 where id=12;
 
 
 /*
+
   Dados retirados de:
   http://suporte.quarta.com.br/LayOuts/eSocial/Tabelas/Tabela_20.htm
   Acesso em 05/11/2022
+  
 */
 INSERT INTO tipo_logradouro (nome_tipo,abreviatura)
 VALUES
